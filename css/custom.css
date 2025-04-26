@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #213448;
+    --color-secondary: #547792;
+    --color-accent: #94B4C1;
+    --color-background: #ECEFCA;
+    --color-text: black;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: var(--color-accent);
+}
