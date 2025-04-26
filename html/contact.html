@@ -1,70 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Pahinis de Laua an 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans">
+
+<body class="font-sans bg-yellow-50 text-gray-800">
 
     <!-- Navigation Bar -->
-  <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="#" class="text-2xl font-bold">
-        <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
-      </a>
-      <!-- Navigation Links -->
-      <ul class="hidden md:flex space-x-8 text-sm font-medium">
-        <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-        <li><a href="schedule.html" class="hover:text-yellow-400">Schedule</a></li>
-        <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-  <!-- Hero Section -->
-  <header 
-    class="relative bg-cover bg-center text-white h-screen" 
-    style="background-image: url('https://via.placeholder.com/1920x1080');">
-    <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
-    <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold">Contact Us</h1>
-      <p class="mt-4">Get in touch with the Pahinis Festival organizers</p>
-    </div>
-  </header>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-10">
-    <div class="container mx-auto px-4">
-      <div class="md:flex md:justify-between">
-        <div>
-          <h3 class="text-lg font-bold text-white">Pahinis Festival</h3>
-          <p class="mt-2">Celebrating the rich tradition of muscovado sugar production and cultural heritage of Laua-an, Antique in the Philippines.</p>
+    <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold">
+                <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
+            </a>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-8 text-sm font-medium">
+                <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+                <li><a href="schedule.html" class="hover:text-yellow-400">Schedule</a></li>
+                <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
         </div>
-        <div class="mt-6 md:mt-0">
-          <h3 class="text-lg font-bold text-white">Quick Links</h3>
-          <ul class="mt-2 space-y-2">
-            <li><a href="#" class="hover:text-yellow-500">Home</a></li>
-            <li><a href="#" class="hover:text-yellow-500">About the Festival</a></li>
-            <li><a href="#" class="hover:text-yellow-500">Event Schedule</a></li>
-            <li><a href="#" class="hover:text-yellow-500">Gallery</a></li>
-            <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
-          </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center text-white h-80"
+        style="background-image: url('https://via.placeholder.com/1920x1080');">
+        <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
+        <div class="relative z-10 container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold">Contact Us</h1>
+            <p class="mt-4">Get in touch with the Pahinis Festival organizers</p>
         </div>
-        <div class="mt-6 md:mt-0">
-          <h3 class="text-lg font-bold text-white">Contact Information</h3>
-          <p class="mt-2">Municipal Hall of Laua-an, Antique, Philippines 5705</p>
-          <p class="mt-2">+63 (35) 123-4567</p>
-          <p class="mt-2"><a href="mailto:info@pahinisfestival.com" class="hover:text-yellow-500">info@pahinisfestival.com</a></p>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 px-6 lg:px-24">
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-6">Get In Touch</h2>
+                <p class="mb-8">We’d love to hear from you! Whether you have a question about the festival, want to
+                    become a partner, or need any assistance, our team is here to help.</p>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16.88 3.549A9.956 9.956 0 0112 2c-2.148 0-4.142.676-5.88 1.823m11.76 0A9.956 9.956 0 0122 12c0 2.148-.676 4.142-1.823 5.88m-15.354 0A9.956 9.956 0 012 12c0-2.148.676-4.142 1.823-5.88m15.354 0L12 12m0 0l-9.177 9.177M12 12l9.177 9.177" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Visit Us</h3>
+                            <p>Municipal Hall of Laua-an, Antique, Philippines 5705</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10l9-9m0 0l9 9m-9-9v18" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Call Us</h3>
+                            <p>Phone: +63 (36) 123-4567</p>
+                            <p>Mobile: +63 912 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16.88 3.549A9.956 9.956 0 0112 2c-2.148 0-4.142.676-5.88 1.823m11.76 0A9.956 9.956 0 0122 12c0 2.148-.676 4.142-1.823 5.88m-15.354 0A9.956 9.956 0 012 12c0-2.148.676-4.142 1.823-5.88m15.354 0L12 12m0 0l-9.177 9.177M12 12l9.177 9.177" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Email Us</h3>
+                            <p>General Inquiries: info@pahinisfestival.com</p>
+                            <p>Partnerships: partners@pahinisfestival.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m4 4v-4h-1m4-4H9m1 0h4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Office Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            <p>Saturday: 9:00 AM - 12:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="bg-white p-8 shadow-lg rounded-lg">
+                <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                        <input type="text" id="name" name="name"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                    </div>
+                    <div>
+                        <label for="inquiry" class="block text-sm font-medium text-gray-700">Inquiry Type</label>
+                        <select id="inquiry" name="inquiry"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                            <option>General Inquiry</option>
+                            <option>Partnership</option>
+                            <option>Support</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-yellow-600 text-white py-2 px-4 rounded-md hover:bg-yellow-700">Send
+                        Message</button>
+                </form>
+            </div>
         </div>
-      </div>
-      <p class="mt-10 text-center text-sm text-gray-500">&copy; 2025 Pahinis Festival. All rights reserved. <a href="#" class="hover:text-yellow-500">Privacy Policy</a> | <a href="#" class="hover:text-yellow-500">Terms of Use</a></p>
-    </div>
-  </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="md:flex md:justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white">Pahinis Festival</h3>
+                    <p class="mt-2">Celebrating the rich tradition of muscovado sugar production and cultural heritage
+                        of Laua-an, Antique in the Philippines.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <h3 class="text-lg font-bold text-white">Quick Links</h3>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:text-yellow-500">Home</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">About the Festival</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">Event Schedule</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">Gallery</a></li>
+                        <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <h3 class="text-lg font-bold text-white">Contact Information</h3>
+                    <p class="mt-2">Municipal Hall of Laua-an, Antique, Philippines 5705</p>
+                    <p class="mt-2">+63 (35) 123-4567</p>
+                    <p class="mt-2"><a href="mailto:info@pahinisfestival.com"
+                            class="hover:text-yellow-500">info@pahinisfestival.com</a></p>
+                </div>
+            </div>
+            <p class="mt-10 text-center text-sm text-gray-500">&copy; 2025 Pahinis Festival. All rights reserved. <a
+                    href="#" class="hover:text-yellow-500">Privacy Policy</a> | <a href="#"
+                    class="hover:text-yellow-500">Terms of Use</a></p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
