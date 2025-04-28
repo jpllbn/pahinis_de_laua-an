@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Pahinis de Laua an 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+<?php
+$title = "Gallery | Pahinis de Laua-an";
+include '../includes/head.php';
+?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
 
@@ -19,11 +17,11 @@
             </a>
             <!-- Navigation Links -->
             <ul class="hidden md:flex space-x-8 text-sm font-medium">
-                <li><a href="../index.html" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-                <li><a href="schedule.html" class="hover:text-yellow-400">Schedule</a></li>
-                <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
-                <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                <li><a href="../index.php" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="about.php" class="hover:text-yellow-400">About</a></li>
+                <li><a href="schedule.php" class="hover:text-yellow-400">Schedule</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Gallery</a></li>
+                <li><a href="contact.php" class="hover:text-yellow-400">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -113,33 +111,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-10">
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 class="text-lg font-bold text-white">Pahinis Festival</h3>
-              <p class="mt-2">Celebrating the rich tradition of muscovado sugar production and cultural heritage of Laua-an, Antique in the Philippines.</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold text-white">Quick Links</h3>
-              <ul class="mt-2 space-y-2">
-                <li><a href="#" class="hover:text-yellow-500">Home</a></li>
-                <li><a href="#" class="hover:text-yellow-500">About the Festival</a></li>
-                <li><a href="#" class="hover:text-yellow-500">Event Schedule</a></li>
-                <li><a href="#" class="hover:text-yellow-500">Gallery</a></li>
-                <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold text-white">Contact Information</h3>
-              <p class="mt-2">Municipal Hall of Laua-an, Antique, Philippines 5705</p>
-              <p class="mt-2">+63 (35) 123-4567</p>
-              <p class="mt-2"><a href="mailto:info@pahinisfestival.com" class="hover:text-yellow-500">info@pahinisfestival.com</a></p>
-            </div>
-          </div>
-          <p class="mt-10 text-center text-sm text-gray-500">&copy; 2025 Pahinis Festival. All rights reserved. <a href="#" class="hover:text-yellow-500">Privacy Policy</a> | <a href="#" class="hover:text-yellow-500">Terms of Use</a></p>
-        </div>
-      </footer>
+    <?php include '../includes/footer.php'; ?>
 
 </body>
 
