@@ -55,11 +55,11 @@ include '../includes/head.php';
 
         <!-- Photo Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/tourism.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/tourism1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/tourism2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/tourism3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="#" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
