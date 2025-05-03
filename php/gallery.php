@@ -55,14 +55,26 @@ include '../includes/head.php';
 
         <!-- Photo Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="../images/tourism.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/muscovado3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="../images/tourism1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="../images/tourism2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
             <img src="../images/tourism3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="#" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/festival.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/festival1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/festival2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/festival3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/muscovado.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/muscovado1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/muscovado2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/mixed peanuts.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/igmatongtong.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/igmatongtong1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/igmatongtong3.webp" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/bongbongan.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/bongbongan1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/tourism.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/butong-butong.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <img src="../images/festival4.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
         </div>
     </section>
 
@@ -83,12 +95,18 @@ include '../includes/head.php';
                 </div>
             </div>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-HTyFGGEeas?si=ir32Dj1Sb4qBjWni"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="p-4">
                     <h3 class="font-semibold text-lg">Muscovado Production Process</h3>
                     <p class="mt-2 text-sm text-gray-600">Step-by-step demonstration of the traditional muscovado sugar production process.</p>
                 </div>
             </div>
+
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                 <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail">
                 <div class="p-4">
