@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- About Section -->
       <div>
-        <h3 class="text-lg font-bold mb-2">Pahinis Festival</h3>
+        <h3 class="text-lg font-serif font-bold mb-2">Pahinis Festival</h3>
         <p class="text-sm mb-4">Celebrating the rich tradition of muscovado sugar production and cultural heritage of Laua-an, Antique in the Philippines.</p>
         <div class="flex space-x-4">
           <a href="#" class="hover:text-yellow-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
@@ -15,7 +15,7 @@
 
       <!-- Quick Links Section -->
       <div>
-        <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+        <h3 class="text-lg font-serif font-bold mb-2">Quick Links</h3>
         <ul class="text-sm space-y-1">
           <li><a href="/pahinis_de_laua-an/php/index.php" class="hover:text-yellow-400 transition-colors">Home</a></li>
           <li><a href="/pahinis_de_laua-an/php/about.php" class="hover:text-yellow-400 transition-colors">About the Festival</a></li>
@@ -27,7 +27,7 @@
 
       <!-- Contact Information Section -->
       <div>
-        <h3 class="text-lg font-bold mb-2">Contact Information</h3>
+        <h3 class="text-lg font-serif font-bold mb-2">Contact Information</h3>
         <ul class="text-sm space-y-1">
           <li class="flex items-start">
             <i class="fas fa-map-marker-alt mt-1 mr-2 text-yellow-400"></i>

@@ -11,46 +11,151 @@ $photos = [
     "/pahinis_de_laua-an/images/about.jpg",
     "/pahinis_de_laua-an/images/contact_us.jpg",
     "/pahinis_de_laua-an/images/home_background.jpg",
-    "/pahinis_de_laua-an/images/tourism/bongbongan.jpg",
-    "/pahinis_de_laua-an/images/tourism/bongbongan1.jpg",
-    "/pahinis_de_laua-an/images/tourism/igmatongtong.jpg",
-    "/pahinis_de_laua-an/images/tourism/igmatongtong1.jpg",
-    "/pahinis_de_laua-an/images/tourism/igmatongtong3.jpg",
-    "/pahinis_de_laua-an/images/tourism/tourism.jpg",
-    "/pahinis_de_laua-an/images/tourism/tourism1.jpg",
-    "/pahinis_de_laua-an/images/tourism/tourism2.jpg",
-    "/pahinis_de_laua-an/images/tourism/tourism3.jpg",
-
+    // festival-gallery
+    "/pahinis_de_laua-an/images/festival-gallery/festival-gallery_1.jpg",
+    "/pahinis_de_laua-an/images/festival-gallery/festival-gallery_2.jpg",
+    "/pahinis_de_laua-an/images/festival-gallery/festival-gallery_3.jpg",
+    "/pahinis_de_laua-an/images/festival-gallery/festival-gallery_4.jpg",
+    "/pahinis_de_laua-an/images/festival-gallery/festival-gallery_5.jpg",
+    // celebrations
+    "/pahinis_de_laua-an/images/celebrations/celebrations_1.jpg",
+    "/pahinis_de_laua-an/images/celebrations/celebrations_2.jpg",
+    "/pahinis_de_laua-an/images/celebrations/celebrations_3.jpg",
+    "/pahinis_de_laua-an/images/celebrations/celebrations_4.jpg",
+    "/pahinis_de_laua-an/images/celebrations/celebrations_5.jpg",
+    "/pahinis_de_laua-an/images/celebrations/celebrations_6.jpg",
+    // performances
+    "/pahinis_de_laua-an/images/performances/performances_1.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_2.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_3.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_4.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_5.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_6.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_7.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_8.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_9.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_10.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_11.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_12.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_13.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_14.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_15.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_16.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_17.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_18.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_19.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_20.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_21.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_22.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_23.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_24.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_25.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_26.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_27.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_28.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_29.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_30.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_31.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_32.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_33.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_34.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_35.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_36.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_37.jpg",
+    "/pahinis_de_laua-an/images/performances/performances_38.PNG",
+    // traditional-activities
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_1.png",
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_2.jpg",
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_3.jpg",
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_4.jpg",
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_5.png",
+    "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_6.jpg",
+    // moscuvado-production
+    "/pahinis_de_laua-an/images/moscuvado-production/moscuvado-production_1.jpg",
+    "/pahinis_de_laua-an/images/moscuvado-production/moscuvado-production_2.jpg",
+    // tourism
+    "/pahinis_de_laua-an/images/tourism/tourism_1.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_2.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_3.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_4.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_5.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_6.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_7.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism_8.webp",
+    "/pahinis_de_laua-an/images/tourism/tourism_9.jpg",
 ];
 
 $photosPerPage = 8; 
 $categories = [
     'all' => $photos,
     'celebrations' => [
+        "/pahinis_de_laua-an/images/celebrations/celebrations_1.jpg",
+        "/pahinis_de_laua-an/images/celebrations/celebrations_2.jpg",
+        "/pahinis_de_laua-an/images/celebrations/celebrations_3.jpg",
+        "/pahinis_de_laua-an/images/celebrations/celebrations_4.jpg",
+        "/pahinis_de_laua-an/images/celebrations/celebrations_5.jpg",
+        "/pahinis_de_laua-an/images/celebrations/celebrations_6.jpg",
     ],
     'muscovado' => [
-        "/pahinis_de_laua-an/images/traditional-activities/muscovado.jpg",
-        "/pahinis_de_laua-an/images/traditional-activities/muscovado1.jpg",
-        "/pahinis_de_laua-an/images/traditional-activities/muscovado2.jpg",
-        "/pahinis_de_laua-an/images/traditional-activities/muscovado3.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_2.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_3.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_4.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_6.jpg",
     ],
     'performances' => [
-      
+        "/pahinis_de_laua-an/images/performances/performances_1.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_2.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_3.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_4.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_5.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_6.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_7.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_8.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_9.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_10.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_11.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_12.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_13.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_14.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_15.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_16.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_17.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_18.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_19.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_20.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_21.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_22.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_23.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_24.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_25.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_26.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_27.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_28.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_29.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_30.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_31.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_32.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_33.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_34.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_35.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_36.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_37.jpg",
+        "/pahinis_de_laua-an/images/performances/performances_38.PNG",
     ],
     'traditional' => [
-       
-        
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_1.png",
+        "/pahinis_de_laua-an/images/traditional-activities/traditional-activities_5.png",
     ],
     'tourism' => [
-        "/pahinis_de_laua-an/images/tourism/bongbongan.jpg",
-        "/pahinis_de_laua-an/images/tourism/bongbongan1.jpg",
-        "/pahinis_de_laua-an/images/tourism/igmatongtong.jpg",
-        "/pahinis_de_laua-an/images/tourism/igmatongtong1.jpg",
-        "/pahinis_de_laua-an/images/tourism/igmatongtong3.jpg",
-        "/pahinis_de_laua-an/images/tourism/tourism.jpg",
-        "/pahinis_de_laua-an/images/tourism/tourism1.jpg",
-        "/pahinis_de_laua-an/images/tourism/tourism2.jpg",
-        "/pahinis_de_laua-an/images/tourism/tourism3.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_1.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_2.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_3.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_4.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_5.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_6.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_7.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism_8.webp",
+        "/pahinis_de_laua-an/images/tourism/tourism_9.jpg",
     ]
 ];
 
@@ -80,7 +185,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
         style="background-image: url('/pahinis_de_laua-an/images/festival.jpg');">
         <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
         <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold">Festival Gallery</h1>
+            <h1 class="text-4xl md:text-6xl font-bold font-serif">Festival Gallery</h1>
             <p class="mt-4">Explore moments from past Pahinis Festival celebrations</p>
         </div>
     </header>
@@ -88,7 +193,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
     <!-- Photo Gallery Section -->
     <section class="py-16 px-6 lg:px-24">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Photo Gallery</h2>
+            <h2 class="text-3xl font-bold font-serif">Photo Gallery</h2>
             <p class="mt-4">Browse through our collection of memorable moments from past festivals</p>
         </div>
 
@@ -146,7 +251,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
     <!-- Video Highlights Section -->
     <section class="bg-yellow-100 py-16 px-6 lg:px-24">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Video Highlights</h2>
+            <h2 class="text-3xl font-bold font-serif">Video Highlights</h2>
             <p class="mt-4">Watch video clips from past Pahinis Festival celebrations</p>
         </div>
 
@@ -160,7 +265,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-semibold text-lg">Festival Opening Ceremony 2025</h3>
+                    <h3 class="font-semibold text-lg font-serif">Festival Opening Ceremony 2025</h3>
                     <p class="mt-2 text-sm text-text-light">Highlights from the grand opening ceremony of last year's
                         Pahinis Festival.</p>
                 </div>
@@ -173,7 +278,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-semibold text-lg">Muscovado Production Process</h3>
+                    <h3 class="font-semibold text-lg font-serif">Muscovado Production Process</h3>
                     <p class="mt-2 text-sm text-text-light">Step-by-step demonstration of the traditional muscovado
                         sugar production process.</p>
                 </div>
@@ -186,7 +291,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-semibold text-lg">Tribal Dance Competition</h3>
+                    <h3 class="font-semibold text-lg font-serif">Tribal Dance Competition</h3>
                     <p class="mt-2 text-sm text-text-light">The award-winning performance from last year's tribal dance
                         competition.</p>
                 </div>
@@ -201,7 +306,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
 
     <!-- Call to Action Section -->
     <section class="text-center py-16">
-        <h2 class="text-2xl font-bold mb-6">Share Your Festival Memories</h2>
+        <h2 class="text-2xl font-bold mb-6 font-serif">Share Your Festival Memories</h2>
         <p class="mb-6">Did you attend a previous Pahinis Festival? We'd love to see and share your photos and videos!
             Use the hashtag #PahinisFestival or submit them directly through our contact form.</p>
         <a href="/pahinis_de_laua-an/php/contact.php"

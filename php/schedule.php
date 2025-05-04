@@ -235,7 +235,7 @@ $categories = [
     style="background-image: url('/pahinis_de_laua-an/images/schedule.jpg');">
     <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
     <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Festival Schedule</h1>
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight font-serif">Festival Schedule</h1>
       <p class="mt-4 font-light">Plan your visit to the Pahinis Festival with our complete event schedule</p>
     </div>
   </header>
@@ -243,7 +243,7 @@ $categories = [
   <!-- Event Schedule Section -->
   <section class="py-16 px-6 lg:px-24">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold tracking-tight">Event Schedule</h2>
+      <h2 class="text-3xl font-bold tracking-tight font-serif">Event Schedule</h2>
       <p class="mt-4 font-light">Join us for seven days of celebration from January 22-28, 2026</p>
     </div>
 
@@ -271,11 +271,11 @@ $categories = [
     <div id="schedule-content">
       <?php foreach ($events as $day => $dayEvents): ?>
         <div class="day-content <?php echo $day === 'day1' ? '' : 'hidden'; ?>" data-day="<?php echo $day; ?>">
-          <h3 class="text-2xl font-semibold mb-6 tracking-tight"><?php echo ucfirst(str_replace('day', 'Day ', $day)); ?>: January <?php echo 21 + intval(substr($day, -1)); ?>, 2026</h3>
+          <h3 class="text-2xl font-semibold mb-6 tracking-tight font-serif"><?php echo ucfirst(str_replace('day', 'Day ', $day)); ?>: January <?php echo 21 + intval(substr($day, -1)); ?>, 2026</h3>
           <div class="space-y-6">
             <?php foreach ($dayEvents as $event): ?>
               <div class="card event-item" data-category="<?php echo $event['category']; ?>">
-                <h4 class="text-xl font-semibold tracking-tight"><?php echo $event['title']; ?></h4>
+                <h4 class="text-xl font-semibold tracking-tight font-serif"><?php echo $event['title']; ?></h4>
                 <p class="mt-2 font-light"><?php echo $event['description']; ?></p>
                 <div class="mt-4 text-sm text-gray-500 flex items-center space-x-4">
                   <span class="flex items-center font-light">

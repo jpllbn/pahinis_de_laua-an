@@ -2,7 +2,7 @@
 <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
     <!-- Logo -->
-    <a href="index.php" class="text-2xl font-bold">
+    <a href="../php/index.php" class="text-2xl font-bold">
       <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
     </a>
     <!-- Navigation Links -->

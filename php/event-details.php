@@ -55,7 +55,7 @@ if (!$event) {
                 
                 <!-- Event Details -->
                 <div class="p-8">
-                    <h1 class="text-3xl font-bold mb-4"><?php echo $event['title']; ?></h1>
+                    <h1 class="text-3xl font-bold mb-4 font-serif"><?php echo $event['title']; ?></h1>
                     
                     <div class="flex items-center space-x-4 text-gray-600 mb-6">
                         <span class="flex items-center">

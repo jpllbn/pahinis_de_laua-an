@@ -14,7 +14,7 @@ include '../includes/head.php';
         style="background-image: url('/pahinis_de_laua-an/images/about.jpg');">
         <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
         <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold">About Pahinis Festival</h1>
+            <h1 class="text-4xl md:text-6xl font-bold font-serif">About Pahinis Festival</h1>
             <p class="mt-4">Discover the rich cultural heritage behind our sweet celebration</p>
         </div>
     </header>
@@ -23,7 +23,7 @@ include '../includes/head.php';
     <section class="py-16 px-6 lg:px-24">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-                <h2 class="text-3xl font-bold mb-6">The Origins of Pahinis</h2>
+                <h2 class="text-3xl font-bold mb-6 font-serif">The Origins of Pahinis</h2>
                 <p class="mb-4">
                     The Pahinis Festival, derived from the local term "pahinis" meaning to produce or extract, was
                     established to honor the traditional muscovado sugar production that has been the economic backbone
@@ -54,7 +54,7 @@ include '../includes/head.php';
                 </ul>
             </div>
             <div>
-                <img src="/pahinis_de_laua-an/images/about_section.jpg" alt="Festival Image"
+                <img src="/pahinis_de_laua-an/images/traditional-activities/muscovado.jpg" alt="Festival Image"
                     class="rounded-lg shadow-lg w-full">
             </div>
         </div>
@@ -62,7 +62,7 @@ include '../includes/head.php';
 
     <!-- Festival Facts Section -->
     <section class="bg-yellow-100 py-16 px-6 lg:px-24">
-        <h2 class="text-3xl font-bold text-center mb-12">Festival Facts</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 font-serif">Festival Facts</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
                 <p class="text-4xl font-bold text-yellow-600">20+ Years</p>
@@ -85,7 +85,7 @@ include '../includes/head.php';
 
     <!-- Sweet Heritage Section -->
     <section class="py-16 px-6 lg:px-24">
-        <h2 class="text-3xl font-bold text-center mb-12">The Sweet Heritage of Muscovado</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 font-serif">The Sweet Heritage of Muscovado</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div>
                 <h3 class="font-semibold text-lg">Harvesting</h3>
@@ -117,10 +117,10 @@ include '../includes/head.php';
 
     <!-- Cultural Significance Section -->
     <section class="bg-orange-100 py-16 px-6 lg:px-24 text-gray-800">
-        <h2 class="text-3xl font-bold text-center mb-12">Cultural Significance</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 font-serif">Cultural Significance</h2>
         <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <img src="/pahinis_de_laua-an/images/cultural_section.jpg" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
+                <img src="/pahinis_de_laua-an/images/traditional-activities/muscovado2.jpg" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Community Pride</h3>
