@@ -2,11 +2,9 @@
 $title = "Event Details | Pahinis de Laua-an";
 include '../includes/head.php';
 
-// Get event details from URL parameters
 $day = isset($_GET['day']) ? $_GET['day'] : '';
 $eventTitle = isset($_GET['event']) ? urldecode($_GET['event']) : '';
 
-// Event data (same as in schedule.php)
 $events = [
     'day1' => [
         [
@@ -18,12 +16,10 @@ $events = [
             'details' => 'Join us for the grand opening of the Pahinis Festival 2026. The ceremony will feature traditional blessings, speeches from local officials, and cultural performances showcasing the rich heritage of Laua-an.',
             'image' => '../images/opening-ceremony.jpg'
         ],
-        // ... other day1 events ...
+       
     ],
-    // ... other days ...
 ];
 
-// Find the specific event
 $event = null;
 if ($day && $eventTitle) {
     foreach ($events[$day] as $e) {
@@ -34,7 +30,7 @@ if ($day && $eventTitle) {
     }
 }
 
-// If event not found, redirect to schedule
+
 if (!$event) {
     header('Location: schedule.php');
     exit;
@@ -44,7 +40,6 @@ if (!$event) {
 <body class="font-sans bg-yellow-50 text-gray-800">
     <?php include 'includes/nav.php'; ?>
 
-    <!-- Event Details Section -->
     <section class="py-16 px-6 lg:px-24">
         <div class="container mx-auto">
             <!-- Back Button -->

@@ -5,7 +5,6 @@
 $title = "Schedule | Pahinis de Laua-an";
 include '../includes/head.php';
 
-// Event data structure with dummy content
 $events = [
     'day1' => [
         [
@@ -28,6 +27,13 @@ $events = [
             'time' => '10:00 AM - 12:00 PM',
             'location' => 'Community Sugar Mill',
             'category' => 'cultural'
+        ],
+        [
+            'title' => 'Traditional Food Market',
+            'description' => 'Sample various local delicacies and traditional dishes made with muscovado sugar.',
+            'time' => '11:00 AM - 7:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'food'
         ]
     ],
     'day2' => [
@@ -51,6 +57,13 @@ $events = [
             'time' => '11:00 AM - 7:00 PM',
             'location' => 'Town Plaza',
             'category' => 'food'
+        ],
+        [
+            'title' => 'Cultural Dance Workshop',
+            'description' => 'Learn traditional dances from local cultural groups.',
+            'time' => '9:00 AM - 11:00 AM',
+            'location' => 'Community Center',
+            'category' => 'cultural'
         ]
     ],
     'day3' => [
@@ -74,6 +87,13 @@ $events = [
             'time' => '7:00 PM - 9:00 PM',
             'location' => 'Town Plaza',
             'category' => 'ceremony'
+        ],
+        [
+            'title' => 'Muscovado Dessert Contest',
+            'description' => 'Competition for the best muscovado-based desserts.',
+            'time' => '2:00 PM - 5:00 PM',
+            'location' => 'Community Center',
+            'category' => 'competition'
         ]
     ],
     'day4' => [
@@ -89,6 +109,20 @@ $events = [
             'description' => 'Learn to cook traditional dishes using muscovado sugar.',
             'time' => '2:00 PM - 5:00 PM',
             'location' => 'Community Center',
+            'category' => 'food'
+        ],
+        [
+            'title' => 'Traditional Music Concert',
+            'description' => 'Performance of traditional Filipino music and instruments.',
+            'time' => '6:00 PM - 8:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Muscovado Product Fair',
+            'description' => 'Showcase and sale of various muscovado-based products.',
+            'time' => '10:00 AM - 6:00 PM',
+            'location' => 'Town Plaza',
             'category' => 'food'
         ]
     ],
@@ -106,6 +140,20 @@ $events = [
             'time' => '6:00 PM - 9:00 PM',
             'location' => 'Town Plaza',
             'category' => 'competition'
+        ],
+        [
+            'title' => 'Traditional Food Cooking Demo',
+            'description' => 'Live demonstration of cooking traditional dishes with muscovado.',
+            'time' => '2:00 PM - 4:00 PM',
+            'location' => 'Community Center',
+            'category' => 'food'
+        ],
+        [
+            'title' => 'Cultural Heritage Exhibit',
+            'description' => 'Exhibition of local artifacts and historical items.',
+            'time' => '10:00 AM - 5:00 PM',
+            'location' => 'Municipal Hall',
+            'category' => 'cultural'
         ]
     ],
     'day6' => [
@@ -115,6 +163,27 @@ $events = [
             'time' => '7:00 PM - 10:00 PM',
             'location' => 'Town Plaza',
             'category' => 'ceremony'
+        ],
+        [
+            'title' => 'Traditional Costume Contest',
+            'description' => 'Competition showcasing traditional Filipino costumes.',
+            'time' => '2:00 PM - 5:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'competition'
+        ],
+        [
+            'title' => 'Local Food Bazaar',
+            'description' => 'Market featuring various local delicacies and muscovado products.',
+            'time' => '10:00 AM - 6:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'food'
+        ],
+        [
+            'title' => 'Cultural Storytelling',
+            'description' => 'Local elders share stories and traditions of Laua-an.',
+            'time' => '4:00 PM - 6:00 PM',
+            'location' => 'Community Center',
+            'category' => 'cultural'
         ]
     ],
     'day7' => [
@@ -122,6 +191,27 @@ $events = [
             'title' => 'Closing Ceremony',
             'description' => 'Final day celebration with awards, performances, and fireworks display.',
             'time' => '6:00 PM - 10:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'ceremony'
+        ],
+        [
+            'title' => 'Grand Cultural Show',
+            'description' => 'Final showcase of traditional dances and performances.',
+            'time' => '7:00 PM - 9:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Farewell Food Festival',
+            'description' => 'Final day food celebration with all participating vendors.',
+            'time' => '11:00 AM - 7:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'food'
+        ],
+        [
+            'title' => 'Awarding of Festival Winners',
+            'description' => 'Final awarding ceremony for all competition winners.',
+            'time' => '5:00 PM - 6:00 PM',
             'location' => 'Town Plaza',
             'category' => 'ceremony'
         ]
@@ -216,11 +306,10 @@ $categories = [
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold mb-6 tracking-tight">Take the Schedule With You</h2>
       <p class="mb-6 font-light">Download a printable version of our complete festival schedule to help plan your visit.</p>
-      <a href="/pahinis_de_laua-an/php/generate_pdf.php" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700 inline-flex items-center font-medium">
+      <a href="/pahinis_de_laua-an/php/generate_pdf.php" rel="noopener" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700 inline-flex items-center font-medium">
         <i class="fas fa-download mr-2"></i>
         Download PDF Schedule
       </a>
-      <p class="mt-4 text-sm text-gray-600 font-light">PDF will open in a new window</p>
     </div>
   </section>
 
@@ -233,7 +322,7 @@ $categories = [
       const dayContents = document.querySelectorAll('.day-content');
       const eventItems = document.querySelectorAll('.event-item');
 
-      // Day navigation functionality
+      // Day navigation
       dayButtons.forEach(button => {
         button.addEventListener('click', function() {
           const selectedDay = this.dataset.day;

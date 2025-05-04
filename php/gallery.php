@@ -5,7 +5,6 @@
 $title = "Gallery | Pahinis de Laua-an";
 include '../includes/head.php';
 
-// Pagination logic
 $photos = [
     "/pahinis_de_laua-an/images/festival.jpg",
     "/pahinis_de_laua-an/images/schedule.jpg",
@@ -22,17 +21,12 @@ $photos = [
     "/pahinis_de_laua-an/images/tourism/tourism2.jpg",
     "/pahinis_de_laua-an/images/tourism/tourism3.jpg",
 
-
-    // Add more here if you provide the filenames in subfolders
 ];
 
-$photosPerPage = 8; // Number of photos per page
-
-// Define categories and their corresponding photos
+$photosPerPage = 8; 
 $categories = [
     'all' => $photos,
     'celebrations' => [
-        // Add celebration images here if you provide the filenames
     ],
     'muscovado' => [
         "/pahinis_de_laua-an/images/traditional-activities/muscovado.jpg",
@@ -41,11 +35,11 @@ $categories = [
         "/pahinis_de_laua-an/images/traditional-activities/muscovado3.jpg",
     ],
     'performances' => [
-        // Add performances images here if you provide the filenames
+      
     ],
     'traditional' => [
        
-        // Add traditional-activities images here if you provide the filenames
+        
     ],
     'tourism' => [
         "/pahinis_de_laua-an/images/tourism/bongbongan.jpg",
@@ -60,24 +54,21 @@ $categories = [
     ]
 ];
 
-// Get the selected category from the query string, default to 'all'
+
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
 
-// Get the photos for the selected category
 $filteredPhotos = isset($categories[$selectedCategory]) ? $categories[$selectedCategory] : $photos;
 
-// Update total photos and pagination logic based on the filtered photos
+
 $totalPhotos = count($filteredPhotos);
 $totalPages = ceil($totalPhotos / $photosPerPage);
 
-// Get the current page from the query string, default to 1
 $currentPage = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 $currentPage = max(1, min($currentPage, $totalPages)); // Ensure the page is within range
 
-// Calculate the offset for the current page
+
 $offset = ($currentPage - 1) * $photosPerPage;
 
-// Get the photos for the current page
 $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
 ?>
 
@@ -123,7 +114,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
         <!-- Photo Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <?php foreach ($currentPhotos as $photo): ?>
-                <div class="aspect-w-4 aspect-h-3">
+                <div class="aspect-w-4 aspect-h-16">
                     <img src="<?php echo $photo; ?>" alt="Festival Photo"
                         class="w-full h-full object-cover rounded-lg shadow-md">
                 </div>
@@ -162,8 +153,8 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
         <!-- Video Grid -->
         <div class="grid md:grid-cols-3 gap-8">
             <div class="card overflow-hidden">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/tnrOzMPtxvo?si=Y0YXoIb7EoyAqs75"
+                <div class="aspect-w-16 aspect-h-12 rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/tnrOzMPtxvo?si=Y0YXoIb7EoyAqs75"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -175,8 +166,8 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
                 </div>
             </div>
             <div class="card overflow-hidden">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/-HTyFGGEeas?si=ir32Dj1Sb4qBjWni"
+                <div class="aspect-w-16 aspect-h-6 rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/-HTyFGGEeas?si=ir32Dj1Sb4qBjWni"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -188,8 +179,8 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
                 </div>
             </div>
             <div class="card overflow-hidden">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y8CaQOtcC64?si=yXLkri_Mad2n7p_8"
+                <div class="aspect-w-16 aspect-h-6 rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/Y8CaQOtcC64?si=yXLkri_Mad2n7p_8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -203,7 +194,7 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
         </div>
 
         <div class="text-center mt-8">
-            <a href="#" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View More
+            <a href="https://www.youtube.com/results?search_query=Pahinis+Festival" target="_blank" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View More
                 Videos on YouTube</a>
         </div>
     </section>
