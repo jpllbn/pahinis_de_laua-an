@@ -9,11 +9,11 @@
       <div>
         <h3 class="text-lg font-bold text-white">Quick Links</h3>
         <ul class="mt-2 space-y-2">
-          <li><a href="#" class="hover:text-yellow-500">Home</a></li>
-          <li><a href="#" class="hover:text-yellow-500">About the Festival</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Event Schedule</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Gallery</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Contact Us</a></li>
+          <li><a href="../php/index.php" class="hover:text-yellow-500">Home</a></li>
+          <li><a href="../php/about.php" class="hover:text-yellow-500">About the Festival</a></li>
+          <li><a href="../php/schedule.php" class="hover:text-yellow-500">Event Schedule</a></li>
+          <li><a href="../php/gallery.php" class="hover:text-yellow-500">Gallery</a></li>
+          <li><a href="../php/contact.php" class="hover:text-yellow-500">Contact Us</a></li>
         </ul>
       </div>
       <div>

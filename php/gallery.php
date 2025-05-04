@@ -4,31 +4,89 @@
 <?php
 $title = "Gallery | Pahinis de Laua-an";
 include '../includes/head.php';
+
+// Pagination logic
+$photos = [
+    "/pahinis_de_laua-an/images/festival.jpg",
+    "/pahinis_de_laua-an/images/schedule.jpg",
+    "/pahinis_de_laua-an/images/about.jpg",
+    "/pahinis_de_laua-an/images/contact_us.jpg",
+    "/pahinis_de_laua-an/images/home_background.jpg",
+    "/pahinis_de_laua-an/images/tourism/bongbongan.jpg",
+    "/pahinis_de_laua-an/images/tourism/bongbongan1.jpg",
+    "/pahinis_de_laua-an/images/tourism/igmatongtong.jpg",
+    "/pahinis_de_laua-an/images/tourism/igmatongtong1.jpg",
+    "/pahinis_de_laua-an/images/tourism/igmatongtong3.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism1.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism2.jpg",
+    "/pahinis_de_laua-an/images/tourism/tourism3.jpg",
+
+
+    // Add more here if you provide the filenames in subfolders
+];
+
+$photosPerPage = 8; // Number of photos per page
+
+// Define categories and their corresponding photos
+$categories = [
+    'all' => $photos,
+    'celebrations' => [
+        // Add celebration images here if you provide the filenames
+    ],
+    'muscovado' => [
+        "/pahinis_de_laua-an/images/traditional-activities/muscovado.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/muscovado1.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/muscovado2.jpg",
+        "/pahinis_de_laua-an/images/traditional-activities/muscovado3.jpg",
+    ],
+    'performances' => [
+        // Add performances images here if you provide the filenames
+    ],
+    'traditional' => [
+       
+        // Add traditional-activities images here if you provide the filenames
+    ],
+    'tourism' => [
+        "/pahinis_de_laua-an/images/tourism/bongbongan.jpg",
+        "/pahinis_de_laua-an/images/tourism/bongbongan1.jpg",
+        "/pahinis_de_laua-an/images/tourism/igmatongtong.jpg",
+        "/pahinis_de_laua-an/images/tourism/igmatongtong1.jpg",
+        "/pahinis_de_laua-an/images/tourism/igmatongtong3.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism1.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism2.jpg",
+        "/pahinis_de_laua-an/images/tourism/tourism3.jpg",
+    ]
+];
+
+// Get the selected category from the query string, default to 'all'
+$selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
+
+// Get the photos for the selected category
+$filteredPhotos = isset($categories[$selectedCategory]) ? $categories[$selectedCategory] : $photos;
+
+// Update total photos and pagination logic based on the filtered photos
+$totalPhotos = count($filteredPhotos);
+$totalPages = ceil($totalPhotos / $photosPerPage);
+
+// Get the current page from the query string, default to 1
+$currentPage = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$currentPage = max(1, min($currentPage, $totalPages)); // Ensure the page is within range
+
+// Calculate the offset for the current page
+$offset = ($currentPage - 1) * $photosPerPage;
+
+// Get the photos for the current page
+$currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
-            </a>
-            <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-8 text-sm font-medium">
-                <li><a href="../index.php" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="about.php" class="hover:text-yellow-400">About</a></li>
-                <li><a href="schedule.php" class="hover:text-yellow-400">Schedule</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Gallery</a></li>
-                <li><a href="contact.php" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'includes/nav.php'; ?>
 
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
-        style="background-image: url('https://via.placeholder.com/1920x1080');">
+        style="background-image: url('/pahinis_de_laua-an/images/festival.jpg');">
         <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
         <div class="relative z-10 container mx-auto px-4 py-20 text-center">
             <h1 class="text-4xl md:text-6xl font-bold">Festival Gallery</h1>
@@ -45,37 +103,53 @@ include '../includes/head.php';
 
         <!-- Filter Section -->
         <div class="mb-8 flex justify-center space-x-4">
-            <button class="px-4 py-2 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">All Photos</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Celebrations</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Muscovado Production</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Performances</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Traditional Activities</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Tourism</button>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=all"
+                class="px-4 py-2 <?php echo $selectedCategory === 'all' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">All
+                Photos</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=celebrations"
+                class="px-4 py-2 <?php echo $selectedCategory === 'celebrations' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">Celebrations</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=muscovado"
+                class="px-4 py-2 <?php echo $selectedCategory === 'muscovado' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">Muscovado
+                Production</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=performances"
+                class="px-4 py-2 <?php echo $selectedCategory === 'performances' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">Performances</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=traditional"
+                class="px-4 py-2 <?php echo $selectedCategory === 'traditional' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">Traditional
+                Activities</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php?category=tourism"
+                class="px-4 py-2 <?php echo $selectedCategory === 'tourism' ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">Tourism</a>
         </div>
 
         <!-- Photo Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="../images/muscovado3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/tourism1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/tourism2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/tourism3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/festival.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/festival1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/festival2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/festival3.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/muscovado.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/muscovado1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/muscovado2.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/mixed peanuts.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/igmatongtong.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/igmatongtong1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/igmatongtong3.webp" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/bongbongan.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/bongbongan1.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/tourism.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/butong-butong.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
-            <img src="../images/festival4.jpg" alt="Festival Photo" class="rounded-lg shadow-lg">
+            <?php foreach ($currentPhotos as $photo): ?>
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="<?php echo $photo; ?>" alt="Festival Photo"
+                        class="w-full h-full object-cover rounded-lg shadow-md">
+                </div>
+            <?php endforeach; ?>
         </div>
+
+        <!-- Pagination Links -->
+        <div class="mt-8 flex justify-center space-x-2">
+            <?php if ($currentPage > 1): ?>
+                <a href="/pahinis_de_laua-an/php/gallery.php?page=<?php echo $currentPage - 1; ?>&category=<?php echo $selectedCategory; ?>"
+                    class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Previous</a>
+            <?php endif; ?>
+
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                <a href="/pahinis_de_laua-an/php/gallery.php?page=<?php echo $i; ?>&category=<?php echo $selectedCategory; ?>"
+                    class="px-4 py-2 <?php echo $i === $currentPage ? 'bg-yellow-600 text-white' : 'bg-gray-200 text-gray-800'; ?> rounded-md hover:bg-gray-300">
+                    <?php echo $i; ?>
+                </a>
+            <?php endfor; ?>
+
+            <?php if ($currentPage < $totalPages): ?>
+                <a href="/pahinis_de_laua-an/php/gallery.php?page=<?php echo $currentPage + 1; ?>&category=<?php echo $selectedCategory; ?>"
+                    class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Next</a>
+            <?php endif; ?>
+        </div>
+
     </section>
 
     <!-- Video Highlights Section -->
@@ -87,45 +161,60 @@ include '../includes/head.php';
 
         <!-- Video Grid -->
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail">
+            <div class="card overflow-hidden">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/tnrOzMPtxvo?si=Y0YXoIb7EoyAqs75"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="p-4">
                     <h3 class="font-semibold text-lg">Festival Opening Ceremony 2025</h3>
-                    <p class="mt-2 text-sm text-gray-600">Highlights from the grand opening ceremony of last year's Pahinis Festival.</p>
+                    <p class="mt-2 text-sm text-text-light">Highlights from the grand opening ceremony of last year's
+                        Pahinis Festival.</p>
                 </div>
             </div>
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="card overflow-hidden">
                 <div class="aspect-w-16 aspect-h-9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-HTyFGGEeas?si=ir32Dj1Sb4qBjWni"
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/-HTyFGGEeas?si=ir32Dj1Sb4qBjWni"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
                     <h3 class="font-semibold text-lg">Muscovado Production Process</h3>
-                    <p class="mt-2 text-sm text-gray-600">Step-by-step demonstration of the traditional muscovado sugar production process.</p>
+                    <p class="mt-2 text-sm text-text-light">Step-by-step demonstration of the traditional muscovado
+                        sugar production process.</p>
                 </div>
             </div>
-
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail">
+            <div class="card overflow-hidden">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/Y8CaQOtcC64?si=yXLkri_Mad2n7p_8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="p-4">
                     <h3 class="font-semibold text-lg">Tribal Dance Competition</h3>
-                    <p class="mt-2 text-sm text-gray-600">The award-winning performance from last year's tribal dance competition.</p>
+                    <p class="mt-2 text-sm text-text-light">The award-winning performance from last year's tribal dance
+                        competition.</p>
                 </div>
             </div>
         </div>
 
         <div class="text-center mt-8">
-            <a href="#" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View More Videos on YouTube</a>
+            <a href="#" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View More
+                Videos on YouTube</a>
         </div>
     </section>
 
     <!-- Call to Action Section -->
     <section class="text-center py-16">
         <h2 class="text-2xl font-bold mb-6">Share Your Festival Memories</h2>
-        <p class="mb-6">Did you attend a previous Pahinis Festival? We'd love to see and share your photos and videos! Use the hashtag #PahinisFestival or submit them directly through our contact form.</p>
-        <a href="contact.html" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Submit Your Photos</a>
+        <p class="mb-6">Did you attend a previous Pahinis Festival? We'd love to see and share your photos and videos!
+            Use the hashtag #PahinisFestival or submit them directly through our contact form.</p>
+        <a href="/pahinis_de_laua-an/php/contact.php"
+            class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Submit Your Photos</a>
     </section>
 
     <!-- Footer -->

@@ -7,28 +7,11 @@ include '../includes/head.php';
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
-            </a>
-            <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-8 text-sm font-medium">
-                <li><a href="../index.php" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="about.php" class="hover:text-yellow-400">About</a></li>
-                <li><a href="schedule.php" class="hover:text-yellow-400">Schedule</a></li>
-                <li><a href="gallery.php" class="hover:text-yellow-400">Gallery</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'includes/nav.php'; ?>
 
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
-        style="background-image: url('/images/contact_us.jpg');">
+        style="background-image: url('/pahinis_de_laua-an/images/contact_us.jpg');">
         <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
         <div class="relative z-10 container mx-auto px-4 py-20 text-center">
             <h1 class="text-4xl md:text-6xl font-bold">Contact Us</h1>
@@ -42,7 +25,7 @@ include '../includes/head.php';
             <!-- Left Column -->
             <div>
                 <h2 class="text-3xl font-semibold mb-6">Get In Touch</h2>
-                <p class="mb-8">We’d love to hear from you! Whether you have a question about the festival, want to
+                <p class="mb-8">We'd love to hear from you! Whether you have a question about the festival, want to
                     become a partner, or need any assistance, our team is here to help.</p>
                 <div class="space-y-6">
                     <div class="flex items-start space-x-4">

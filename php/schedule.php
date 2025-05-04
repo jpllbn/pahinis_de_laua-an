@@ -4,127 +4,301 @@
 <?php
 $title = "Schedule | Pahinis de Laua-an";
 include '../includes/head.php';
+
+// Event data structure with dummy content
+$events = [
+    'day1' => [
+        [
+            'title' => 'Opening Ceremony',
+            'description' => 'The official opening of the festival with traditional blessings, speeches, and inaugural performances.',
+            'time' => '9:00 AM - 11:00 AM',
+            'location' => 'Laua-an Town Plaza',
+            'category' => 'ceremony'
+        ],
+        [
+            'title' => 'Cultural Parade',
+            'description' => 'A vibrant parade showcasing traditional costumes, music, and dances through the main streets of Laua-an.',
+            'time' => '2:00 PM - 4:00 PM',
+            'location' => 'Main Street to Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Muscovado Sugar Making Demo',
+            'description' => 'Learn about the traditional process of making muscovado sugar from sugarcane.',
+            'time' => '10:00 AM - 12:00 PM',
+            'location' => 'Community Sugar Mill',
+            'category' => 'cultural'
+        ]
+    ],
+    'day2' => [
+        [
+            'title' => 'Muscovado Making Contest',
+            'description' => 'Local families compete to create the finest muscovado sugar using traditional methods.',
+            'time' => '10:00 AM - 2:00 PM',
+            'location' => 'Community Sugar Mill',
+            'category' => 'competition'
+        ],
+        [
+            'title' => 'Traditional Games',
+            'description' => 'Experience ancient Filipino games that have been preserved through generations.',
+            'time' => '3:00 PM - 5:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Local Food Fair',
+            'description' => 'Taste various local delicacies and traditional dishes made with muscovado sugar.',
+            'time' => '11:00 AM - 7:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'food'
+        ]
+    ],
+    'day3' => [
+        [
+            'title' => 'Cooking Competition',
+            'description' => 'Local chefs showcase their skills in creating traditional dishes using muscovado sugar.',
+            'time' => '11:00 AM - 2:00 PM',
+            'location' => 'Community Center',
+            'category' => 'food'
+        ],
+        [
+            'title' => 'Cultural Performances',
+            'description' => 'Traditional dances and music performances from different barangays.',
+            'time' => '6:00 PM - 9:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Awarding Ceremony',
+            'description' => 'Recognition of winners from various competitions and contests.',
+            'time' => '7:00 PM - 9:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'ceremony'
+        ]
+    ],
+    'day4' => [
+        [
+            'title' => 'Farm Tour',
+            'description' => 'Guided tour of local sugarcane farms and muscovado production facilities.',
+            'time' => '8:00 AM - 12:00 PM',
+            'location' => 'Various Farms',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Cooking Workshop',
+            'description' => 'Learn to cook traditional dishes using muscovado sugar.',
+            'time' => '2:00 PM - 5:00 PM',
+            'location' => 'Community Center',
+            'category' => 'food'
+        ]
+    ],
+    'day5' => [
+        [
+            'title' => 'Artisan Market',
+            'description' => 'Local artisans showcase and sell their muscovado-based products.',
+            'time' => '9:00 AM - 6:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'cultural'
+        ],
+        [
+            'title' => 'Cultural Dance Competition',
+            'description' => 'Competition featuring traditional dances from different barangays.',
+            'time' => '6:00 PM - 9:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'competition'
+        ]
+    ],
+    'day6' => [
+        [
+            'title' => 'Muscovado Festival Queen Pageant',
+            'description' => 'Beauty pageant celebrating local culture and muscovado heritage.',
+            'time' => '7:00 PM - 10:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'ceremony'
+        ]
+    ],
+    'day7' => [
+        [
+            'title' => 'Closing Ceremony',
+            'description' => 'Final day celebration with awards, performances, and fireworks display.',
+            'time' => '6:00 PM - 10:00 PM',
+            'location' => 'Town Plaza',
+            'category' => 'ceremony'
+        ]
+    ]
+];
+
+$categories = [
+    'all' => 'All Events',
+    'ceremony' => 'Ceremonies',
+    'cultural' => 'Cultural Events',
+    'competition' => 'Competitions',
+    'food' => 'Food Events'
+];
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
+  <?php include 'includes/nav.php'; ?>
 
-    <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
-            </a>
-            <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-8 text-sm font-medium">
-                <li><a href="../index.php" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="about.php" class="hover:text-yellow-400">About</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Schedule</a></li>
-                <li><a href="gallery.php" class="hover:text-yellow-400">Gallery</a></li>
-                <li><a href="contact.php" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Hero Section -->
+  <header class="relative bg-cover bg-center text-white py-32"
+    style="background-image: url('/pahinis_de_laua-an/images/schedule.jpg');">
+    <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
+    <div class="relative z-10 container mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Festival Schedule</h1>
+      <p class="mt-4 font-light">Plan your visit to the Pahinis Festival with our complete event schedule</p>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <header class="relative bg-cover bg-center text-white h-80"
-        style="background-image: url('https://via.placeholder.com/1920x1080');">
-        <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
-        <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold">Festival Schedule</h1>
-            <p class="mt-4">Plan your visit to the Pahinis Festival with our complete event schedule</p>
-        </div>
-    </header>
+  <!-- Event Schedule Section -->
+  <section class="py-16 px-6 lg:px-24">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold tracking-tight">Event Schedule</h2>
+      <p class="mt-4 font-light">Join us for seven days of celebration from January 22-28, 2026</p>
+    </div>
 
-    <!-- Event Schedule Section -->
-    <section class="py-16 px-6 lg:px-24">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Event Schedule</h2>
-            <p class="mt-4">Join us for seven days of celebration from January 22-28, 2026</p>
-        </div>
+    <!-- Filter Section -->
+    <div class="mb-8 flex flex-wrap justify-center gap-4">
+      <?php foreach ($categories as $key => $label): ?>
+        <button class="filter-btn px-4 py-2 rounded-md transition-colors duration-200 font-medium <?php echo $key === 'all' ? 'bg-secondary text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'; ?>"
+          data-category="<?php echo $key; ?>">
+          <?php echo $label; ?>
+        </button>
+      <?php endforeach; ?>
+    </div>
 
-        <!-- Filter Section -->
-        <div class="mb-8 flex justify-center space-x-4">
-            <button class="px-4 py-2 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">All Events</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cultural Events</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Competitions</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Workshops</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Food Events</button>
-        </div>
+    <!-- Day Navigation -->
+    <div class="mb-8 flex flex-wrap justify-center gap-4">
+      <?php for ($i = 1; $i <= 7; $i++): ?>
+        <button class="day-btn px-4 py-2 rounded-md transition-colors duration-200 font-medium <?php echo $i === 1 ? 'bg-secondary text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'; ?>"
+          data-day="day<?php echo $i; ?>">
+          Day <?php echo $i; ?>
+        </button>
+      <?php endfor; ?>
+    </div>
 
-        <!-- Day Navigation -->
-        <div class="mb-8 flex justify-center space-x-4">
-            <button class="px-4 py-2 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Day 1</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 2</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 3</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 4</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 5</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 6</button>
-            <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Day 7</button>
-        </div>
-
-        <!-- Day 1 Schedule -->
-        <div>
-            <h3 class="text-2xl font-semibold mb-6">Day 1: January 22, 2026</h3>
-            <div class="space-y-6">
-                <div class="bg-white shadow-lg p-6 rounded-lg">
-                    <h4 class="text-xl font-semibold">Opening Ceremony</h4>
-                    <p class="mt-2 text-gray-600">The official opening of the festival with traditional blessings, speeches, and inaugural performances.</p>
-                    <div class="mt-4 text-sm text-gray-500 flex items-center space-x-4">
-                        <span class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 16l-4-4m0 0l4-4m-4 4h16" />
-                            </svg>
-                            9:00 AM - 11:00 AM
-                        </span>
-                        <span class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 10l9-9m0 0l9 9m-9-9v18" />
-                            </svg>
-                            Laua-an Town Plaza
-                        </span>
-                    </div>
+    <!-- Schedule Content -->
+    <div id="schedule-content">
+      <?php foreach ($events as $day => $dayEvents): ?>
+        <div class="day-content <?php echo $day === 'day1' ? '' : 'hidden'; ?>" data-day="<?php echo $day; ?>">
+          <h3 class="text-2xl font-semibold mb-6 tracking-tight"><?php echo ucfirst(str_replace('day', 'Day ', $day)); ?>: January <?php echo 21 + intval(substr($day, -1)); ?>, 2026</h3>
+          <div class="space-y-6">
+            <?php foreach ($dayEvents as $event): ?>
+              <div class="card event-item" data-category="<?php echo $event['category']; ?>">
+                <h4 class="text-xl font-semibold tracking-tight"><?php echo $event['title']; ?></h4>
+                <p class="mt-2 font-light"><?php echo $event['description']; ?></p>
+                <div class="mt-4 text-sm text-gray-500 flex items-center space-x-4">
+                  <span class="flex items-center font-light">
+                    <i class="fas fa-clock mr-2"></i>
+                    <?php echo $event['time']; ?>
+                  </span>
+                  <span class="flex items-center font-light">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <?php echo $event['location']; ?>
+                  </span>
                 </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg">
-                    <h4 class="text-xl font-semibold">Cultural Parade</h4>
-                    <p class="mt-2 text-gray-600">A vibrant parade showcasing traditional costumes, music, and dances through the main streets of Laua-an.</p>
-                    <div class="mt-4 text-sm text-gray-500 flex items-center space-x-4">
-                        <span class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 16l-4-4m0 0l4-4m-4 4h16" />
-                            </svg>
-                            2:00 PM - 4:00 PM
-                        </span>
-                        <span class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 10l9-9m0 0l9 9m-9-9v18" />
-                            </svg>
-                            Main Street to Town Plaza
-                        </span>
-                    </div>
+                <div class="mt-4">
+                  <a href="/pahinis_de_laua-an/php/event-details.php?day=<?php echo $day; ?>&event=<?php echo urlencode($event['title']); ?>" 
+                     class="text-orange-600 hover:text-orange-700 font-medium">
+                    View Details <i class="fas fa-arrow-right ml-1"></i>
+                  </a>
                 </div>
-            </div>
+              </div>
+            <?php endforeach; ?>
+          </div>
         </div>
-    </section>
+      <?php endforeach; ?>
+    </div>
+  </section>
 
-    <!-- Download Schedule Section -->
-    <section class="text-center py-16 bg-yellow-100">
-        <h2 class="text-2xl font-bold mb-6">Take the Schedule With You</h2>
-        <p class="mb-6">Download a printable version of our complete festival schedule to help plan your visit.</p>
-        <a href="#" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Download PDF Schedule</a>
-    </section>
+  <!-- Download Schedule Section -->
+  <section class="text-center py-16 bg-yellow-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6 tracking-tight">Take the Schedule With You</h2>
+      <p class="mb-6 font-light">Download a printable version of our complete festival schedule to help plan your visit.</p>
+      <a href="/pahinis_de_laua-an/php/generate_pdf.php" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700 inline-flex items-center font-medium">
+        <i class="fas fa-download mr-2"></i>
+        Download PDF Schedule
+      </a>
+      <p class="mt-4 text-sm text-gray-600 font-light">PDF will open in a new window</p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <?php include '../includes/footer.php'; ?>
+  <?php include '../includes/footer.php'; ?>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dayButtons = document.querySelectorAll('.day-btn');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const dayContents = document.querySelectorAll('.day-content');
+      const eventItems = document.querySelectorAll('.event-item');
+
+      // Day navigation functionality
+      dayButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const selectedDay = this.dataset.day;
+          
+          // Update active state of day buttons
+          dayButtons.forEach(btn => {
+            btn.classList.remove('bg-secondary', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-800');
+          });
+          this.classList.remove('bg-gray-200', 'text-gray-800');
+          this.classList.add('bg-secondary', 'text-white');
+
+          // Show selected day content
+          dayContents.forEach(content => {
+            content.classList.add('hidden');
+            if (content.dataset.day === selectedDay) {
+              content.classList.remove('hidden');
+            }
+          });
+
+          // Reset filter to 'all' when changing days
+          filterButtons.forEach(btn => {
+            if (btn.dataset.category === 'all') {
+              btn.classList.remove('bg-gray-200', 'text-gray-800');
+              btn.classList.add('bg-secondary', 'text-white');
+            } else {
+              btn.classList.remove('bg-secondary', 'text-white');
+              btn.classList.add('bg-gray-200', 'text-gray-800');
+            }
+          });
+
+          // Show all events for the selected day
+          eventItems.forEach(item => {
+            if (item.closest('.day-content').dataset.day === selectedDay) {
+              item.classList.remove('hidden');
+            }
+          });
+        });
+      });
+
+      // Filter functionality
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const selectedCategory = this.dataset.category;
+          
+          // Update active state of filter buttons
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-secondary', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-800');
+          });
+          this.classList.remove('bg-gray-200', 'text-gray-800');
+          this.classList.add('bg-secondary', 'text-white');
+
+          // Filter events
+          eventItems.forEach(item => {
+            if (selectedCategory === 'all' || item.dataset.category === selectedCategory) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

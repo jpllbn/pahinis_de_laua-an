@@ -7,28 +7,11 @@ include '../includes/head.php';
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-
-    <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-gray-800 to-gray-700 text-white">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-orange-600">Pahinis</span> <span class="text-yellow-400">de Laua-an</span>
-            </a>
-            <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-8 text-sm font-medium">
-                <li><a href="../index.php" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="#" class="hover:text-yellow-400">About</a></li>
-                <li><a href="schedule.php" class="hover:text-yellow-400">Schedule</a></li>
-                <li><a href="gallery.php" class="hover:text-yellow-400">Gallery</a></li>
-                <li><a href="contact.php" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'includes/nav.php'; ?>
 
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
-        style="background-image: url('https://via.placeholder.com/1920x1080');">
+        style="background-image: url('/pahinis_de_laua-an/images/about.jpg');">
         <div class="bg-gradient-to-b from-black/50 to-black/75 absolute inset-0"></div>
         <div class="relative z-10 container mx-auto px-4 py-20 text-center">
             <h1 class="text-4xl md:text-6xl font-bold">About Pahinis Festival</h1>
@@ -71,7 +54,7 @@ include '../includes/head.php';
                 </ul>
             </div>
             <div>
-                <img src="https://via.placeholder.com/800x500" alt="Festival Image"
+                <img src="/pahinis_de_laua-an/images/about_section.jpg" alt="Festival Image"
                     class="rounded-lg shadow-lg w-full">
             </div>
         </div>
@@ -137,7 +120,7 @@ include '../includes/head.php';
         <h2 class="text-3xl font-bold text-center mb-12">Cultural Significance</h2>
         <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <img src="https://via.placeholder.com/800x500" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
+                <img src="/pahinis_de_laua-an/images/cultural_section.jpg" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Community Pride</h3>
@@ -155,8 +138,8 @@ include '../includes/head.php';
         <h2 class="text-3xl font-bold">Experience Pahinis Festival 2026</h2>
         <p class="mt-4">Join us for a week-long celebration of culture, heritage, and community as we honor the sweet traditions of muscovado sugar production in Laua-an, Antique.</p>
         <div class="mt-6 space-x-4">
-            <a href="schedule.html" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View Event Schedule</a>
-            <a href="gallery.html" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Browse Gallery</a>
+            <a href="/pahinis_de_laua-an/php/schedule.php" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">View Event Schedule</a>
+            <a href="/pahinis_de_laua-an/php/gallery.php" class="px-6 py-3 bg-yellow-600 text-white rounded-md shadow-md hover:bg-yellow-700">Browse Gallery</a>
         </div>
     </section>
 
