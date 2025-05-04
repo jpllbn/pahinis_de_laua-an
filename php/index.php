@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php
+require_once '../includes/config.php';
 $title = "Home | Pahinis de Laua-an";
 include '../includes/head.php';
+include '../includes/nav.php';
 ?> 
 
 <body class="font-sans">
-  <?php include 'includes/nav.php'; ?>
-
   <!-- Hero Section -->
   <header class="relative bg-cover bg-center text-white h-[70vh] flex items-center justify-center" style="background-image: url('/pahinis_de_laua-an/images/home_background.jpg');">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
@@ -29,7 +29,7 @@ include '../includes/head.php';
         <a href="/pahinis_de_laua-an/php/about.php" class="inline-block bg-[#7C4A03] hover:bg-[#A05A13] text-white px-6 py-3 rounded-md font-semibold shadow transition-colors duration-300">Learn More About Our History</a>
       </div>
       <div class="md:w-1/2 flex flex-col items-center">
-        <img src="/pahinis_de_laua-an/images/festival-gallery/festival-gallery_1.jpg" alt="Festival" class="rounded-lg shadow-lg w-full max-w-md object-cover">
+        <img src="/pahinis_de_laua-an/images/festival-gallery/festival-gallery_2.jpg" alt="Festival" class="rounded-lg shadow-lg w-full max-w-md object-cover">
         <div class="mt-4 flex items-center">
           <span class="bg-yellow-400 text-gray-900 text-sm font-semibold px-4 py-1 rounded shadow">January 22-28, 2026</span>
           <span class="ml-2 bg-white text-gray-700 text-sm px-4 py-1 rounded shadow">Laua-an, Antique</span>

@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php
+require_once '../includes/config.php';
 $title = "About | Pahinis de Laua-an";
 include '../includes/head.php';
-?>
+include '../includes/nav.php';
+?> 
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-    <?php include 'includes/nav.php'; ?>
-
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
         style="background-image: url('/pahinis_de_laua-an/images/about.jpg');">
@@ -54,7 +54,7 @@ include '../includes/head.php';
                 </ul>
             </div>
             <div>
-                <img src="/pahinis_de_laua-an/images/traditional-activities/muscovado.jpg" alt="Festival Image"
+                <img src="/pahinis_de_laua-an/images/traditional-activities/traditional-activities_6.jpg" alt="Festival Image"
                     class="rounded-lg shadow-lg w-full">
             </div>
         </div>
@@ -120,7 +120,7 @@ include '../includes/head.php';
         <h2 class="text-3xl font-bold text-center mb-12 font-serif">Cultural Significance</h2>
         <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <img src="/pahinis_de_laua-an/images/traditional-activities/muscovado2.jpg" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
+                <img src="/pahinis_de_laua-an/images/traditional-activities/traditional-activities_3.jpg" alt="Cultural Image" class="rounded-lg shadow-lg w-full">
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Community Pride</h3>

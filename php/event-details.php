@@ -1,6 +1,8 @@
 <?php
+require_once '../includes/config.php';
 $title = "Event Details | Pahinis de Laua-an";
 include '../includes/head.php';
+include '../includes/nav.php';
 
 $day = isset($_GET['day']) ? $_GET['day'] : '';
 $eventTitle = isset($_GET['event']) ? urldecode($_GET['event']) : '';

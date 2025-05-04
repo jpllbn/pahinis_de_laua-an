@@ -2,8 +2,10 @@
 <html lang="en">
 
 <?php
+require_once '../includes/config.php';
 $title = "Gallery | Pahinis de Laua-an";
 include '../includes/head.php';
+include '../includes/nav.php';
 
 $photos = [
     "/pahinis_de_laua-an/images/festival.jpg",
@@ -178,8 +180,6 @@ $currentPhotos = array_slice($filteredPhotos, $offset, $photosPerPage);
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-    <?php include 'includes/nav.php'; ?>
-
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
         style="background-image: url('/pahinis_de_laua-an/images/festival.jpg');">

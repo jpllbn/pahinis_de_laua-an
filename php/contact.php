@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php
-$title = "Contact | Pahinis de Laua-an";
+require_once '../includes/config.php';
+$title = "Contact Us | Pahinis de Laua-an";
 include '../includes/head.php';
-?>
+include '../includes/nav.php';
+?> 
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-    <?php include 'includes/nav.php'; ?>
-
     <!-- Hero Section -->
     <header class="relative bg-cover bg-center text-white h-80"
         style="background-image: url('/pahinis_de_laua-an/images/contact_us.jpg');">

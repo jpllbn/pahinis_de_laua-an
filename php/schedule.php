@@ -2,8 +2,10 @@
 <html lang="en">
 
 <?php
+require_once '../includes/config.php';
 $title = "Schedule | Pahinis de Laua-an";
 include '../includes/head.php';
+include '../includes/nav.php';
 
 $events = [
     'day1' => [
@@ -228,8 +230,6 @@ $categories = [
 ?>
 
 <body class="font-sans bg-yellow-50 text-gray-800">
-  <?php include 'includes/nav.php'; ?>
-
   <!-- Hero Section -->
   <header class="relative bg-cover bg-center text-white py-32"
     style="background-image: url('/pahinis_de_laua-an/images/schedule.jpg');">
